@@ -1,0 +1,43 @@
+{
+    "editor.fontFamily": "Input Mono",
+    "editor.fontSize": 18,
+    "editor.fontWeight": 400,
+    "scm.inputFontSize": 22,
+    "debug.console.fontSize": 22,
+    "terminal.integrated.fontSize": 22,
+    "workbench.colorTheme": "Monokai",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.cursorStyle": "block",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.tokenColorCustomizations": {
+        "[Monokai]": {
+            "numbers": "#00b0b0",
+            "strings": "#ffffffaa",
+            "comments": "#ffffff77",
+            "functions": "#00b0b0",
+            "types": "#f7941d",
+            "variables": "#b976c8ea"
+        }
+    },
+    "workbench.colorCustomizations": {
+        "[Monokai]": {
+            "titleBar.border": "#000000",
+            "titleBar.activeBackground": "#111111",
+            "editor.background": "#222222",
+            "activityBar.background": "#333333",
+            "minimap.background": "#111111",
+            "terminal.background": "#333333",
+            "statusBar.background": "#333",
+            "input.background": "#000",
+            "menu.background": "#000",
+            "selection.background": "#101010"
+            // "sideBar.dropBackground": "#ff0000",
+            // "banner.background": "#ff0000",
+            // "editorInfo.background": "#ff0000"
+        }
+    },
+    "rust-analyzer.linkedProjects": [
+        "./moviedb/api/lib/Cargo.toml"
+    ]
+}
