@@ -72,6 +72,15 @@ impl<T> DerefMut for Portal<T> {
     }
 }
 
+impl<T> Drop for Portal<T> {
+    fn drop(&mut self) {
+        let ptr = self.0.as_ptr() as *mut _;
+        unsafe {
+            libc::free(ptr)
+        }
+    }
+}
+
 #[derive(Debug)]
 struct Oof<T>(T);
 
