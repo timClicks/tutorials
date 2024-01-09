@@ -16,15 +16,14 @@ fn setup(mut commands: Commands, mut gizmo_conf: ResMut<GizmoConfig>) {
 }
 
 fn clock_face(mut gizmos: Gizmos) {
-    let now = chrono::Utc::now().naive_local();
+    let now = chrono::Local::now();
 
     let hour = now.hour() as f32;
     let minute = now.minute() as f32;
     let second = now.second() as f32;
 
     let minute_angle = (360.0 / 60.0) * minute;
-    let second_angle = (360.0 / 60.0) * second;
-    let hour_angle = (360.0 / 24.0) * hour;
+    let hour_angle: f32 = (360.0 / 12.0) * (hour % 12.);
 
     // seconds
     gizmos.arc_2d(Vec2::ZERO, second_angle.to_radians() / 2.0, second_angle.to_radians(), 100., Color::BISQUE).segments(360*3);
