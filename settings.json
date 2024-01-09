@@ -36,8 +36,5 @@
             // "banner.background": "#ff0000",
             // "editorInfo.background": "#ff0000"
         }
-    },
-    "rust-analyzer.linkedProjects": [
-        "./moviedb/api/lib/Cargo.toml"
-    ]
+    }
 }
