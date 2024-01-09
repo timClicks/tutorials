@@ -22,6 +22,7 @@ fn clock_face(mut gizmos: Gizmos) {
     let minute = now.minute() as f32;
     let second = now.second() as f32;
 
+    let second_angle = (360.0 / 60.0) * second;
     let minute_angle = (360.0 / 60.0) * minute;
     let hour_angle: f32 = (360.0 / 12.0) * (hour % 12.);
 
