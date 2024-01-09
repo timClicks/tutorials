@@ -5,7 +5,7 @@ fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
         .add_systems(Startup, setup)
-        .add_systems(Update, clockface)
+        .add_systems(Update, clock_face)
         .run();
 }
 
@@ -15,7 +15,7 @@ fn setup(mut commands: Commands, mut gizmo_conf: ResMut<GizmoConfig>) {
     gizmo_conf.line_width = 20.0;
 }
 
-fn clockface(mut gizmos: Gizmos) {
+fn clock_face(mut gizmos: Gizmos) {
     let now = chrono::Utc::now().naive_local();
 
     let hour = now.hour() as f32;
