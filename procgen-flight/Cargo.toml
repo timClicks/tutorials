@@ -1,0 +1,12 @@
+[package]
+name = "procgen-flight"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = "0.12.1"
+bevy-inspector-egui = "0.22.1"
+bevy_grid_mesh = { git = "https://github.com/snendev/bevy_grid_mesh.git", version = "0.1.0" }
+noise = "0.8.2"
