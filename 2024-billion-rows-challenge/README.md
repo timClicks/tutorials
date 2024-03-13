@@ -75,3 +75,4 @@ stackon 64-bit machines. `smol_str` uses some of that on-stack data for the text
 [Billion Rows Challenge]: https://www.morling.dev/blog/one-billion-row-challenge/
 [Show and Tell]: https://github.com/gunnarmorling/1brc/discussions/categories/show-and-tell
 [official code repository]: https://github.com/gunnarmorling/1brc
+[YouTube tutorial]: https://www.youtube.com/watch?v=-1VGwmFKKf8
