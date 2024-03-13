@@ -4,9 +4,29 @@ Demonstrations of the [Billion Rows Challenge] in Rust. Hopefully at some stage
 this work will end up in the [Show and Tell] section of the [official code
 repository].
 
+[![Watch live stream recording](https://img.youtube.com/vi/-1VGwmFKKf8/hqdefault.jpg)](https://www.youtube.com/embed/-1VGwmFKKf8)
+
+## Repository structure
+
+- `/original`: code from the [official code repository]
+- `/billions`: code that was used in the [YouTube tutorial]
+
+## Setup 
+
+**Create the measurements**
+
+Run `original/src/main/python/create_measurements.py` to generate 
+the simulated data file. It'll appear as `original/data/measurements.txt`. 
+then copy the resulting 15GB file into `billions`.
+
+
+(TODO: rewrite this in Rust)
+
+## Prior Art
+
 Some Rust implementations to review:
 
-
+- [github.com/tumdum/1brc](https://github.com/tumdum/1brc/blob/main/src/main.rs)
 
 ## Discussion of crates that are being used and how they might help
 
