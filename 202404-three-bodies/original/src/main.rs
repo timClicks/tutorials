@@ -23,14 +23,12 @@ impl Theta for Body {
 }
 
 #[derive(Clone, Debug)]
-
 struct Coordinate {
     x: f64, // m
     y: f64, // m
 }
 
 #[derive(Clone, Debug)]
-
 struct Velocity {
     vx: f64, // m/s
     vy: f64, // m/s
