@@ -21,28 +21,23 @@ struct Step {
     bodies: [Body; 3],
 }
 
-const TIME_STEP: f64 = 0.01;
+const TIME_STEP: f64 = 0.5;
 const STEPS: usize = 100000;
 const GRAVITATIONAL_CONSTANT: f64 = 6.67430e-11; // G
 
 fn main() {
-    let first = Body::new((0.3089693008, 0.4236727692));
-    let second = Body::new((-0.5, 0.0));
-    let third = Body::new((0.5, 0.0));
+    let mut first = Body::new((0.3089693008, 0.4236727692));
+    let mut second = Body::new((-0.5, 0.0));
+    let mut third = Body::new((0.5, 0.0));
 
-    let mut steps = Vec::<Step>::with_capacity(STEPS);
+    // let mut steps = Vec::<Step>::with_capacity(STEPS);
 
     for n in 0..STEPS {
         let mut new_step = Step {
             time: (n as f64) * TIME_STEP,
             step: n as u32,
-            bodies: [
-                first,
-                second,
-                third
-            ],
+            bodies: [first, second, third],
         };
-
 
         for i in 0..3 {
             for j in 0..3 {
@@ -54,8 +49,7 @@ fn main() {
                     let dy: f64 = a.position.1 - b.position.1;
 
                     let r: f64 = (dx * dx + dy * dy).sqrt();
-                    let force =
-                        GRAVITATIONAL_CONSTANT * a.mass * b.mass / r / r;
+                    let force = GRAVITATIONAL_CONSTANT * a.mass * b.mass / r / r;
                     let angle = dy.atan2(dx);
                     let fx = force * angle.cos();
                     let fy = force * angle.sin();
@@ -72,11 +66,15 @@ fn main() {
             body.position.1 += body.velocity.1 * TIME_STEP;
         }
 
+        first = new_step.bodies[0];
+        second = new_step.bodies[1];
+        third = new_step.bodies[2];
+
+        // report current state
         if n % 1000 == 0 {
-            println!("({:.02}, {:.02})", first.position.0, first.position.1);
+            print!("({:.04}, {:.04})", first.position.0, first.position.1);
+            print!(" ({:.04}, {:.04})", second.position.0, second.position.1);
+            println!(" ({:.04}, {:.04})", third.position.0, third.position.1);
         }
-
-
     }
-
 }
