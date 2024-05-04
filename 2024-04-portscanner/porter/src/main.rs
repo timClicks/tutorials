@@ -1,3 +1,4 @@
+use futures::stream::FuturesUnordered;
 use std::net::IpAddr;
 use tokio::net::{TcpStream};
 use tokio::sync::mpsc::{self};
@@ -62,9 +63,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             }
         }
 
-        for task in tasks {
-            task.await.unwrap();
-        }
+        futures::future::join_all(tasks).await
     });
 
     drop(tx);
