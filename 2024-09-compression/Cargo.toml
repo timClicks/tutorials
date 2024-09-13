@@ -1,0 +1,26 @@
+[package]
+name = "compression"
+authors = ["Tim McNamara <tim@mcnamara.nz>"]
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "dummy"
+path = "src/dummy.rs"
+
+[[bin]]
+name = "brotli"
+path = "src/brotli.rs"
+
+[[bin]]
+name = "brötli"
+path = "src/brotli.rs"
+
+[[bin]]
+name = "deflate"
+path = "src/deflate.rs"
+
+[dependencies]
+brotli = "6.0.0"
+# miniz_oxide = { version = "0.8.0", features = ["simd"] }
+flate2 = "1"
