@@ -20,7 +20,12 @@ path = "src/brotli.rs"
 name = "deflate"
 path = "src/deflate.rs"
 
+[[bin]]
+name = "snappy"
+path = "src/snappy.rs"
+
 [dependencies]
 brotli = "6.0.0"
 # miniz_oxide = { version = "0.8.0", features = ["simd"] }
 flate2 = "1"
+snap = "1"
