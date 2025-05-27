@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 24,
+    "editor.fontFamily": "'Berkeley Mono', 'Space Mono', Consolas, 'Courier New', monospace",
+    "editor.minimap.sectionHeaderFontSize": 9,
+    "debug.console.fontSize": 22
+}
